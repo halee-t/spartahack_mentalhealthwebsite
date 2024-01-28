@@ -25,3 +25,4 @@ In the future, we would like to continue our work on finishing the ChatBot and i
 Favicon: https://www.flaticon.com/free-icons/gold-trophy" Gold trophy icons created by Md Tanvirul Haque - Flaticon<br>
 Panda Character: Valeriia Volodskikh on Vecteezy<br>
 Sounds by Pixabay<br>
+Chatbot: Patrick Loeber https://github.com/patrickloeber/chatbot-deployment
