@@ -12,8 +12,6 @@ Front End:
   <li>CSS</li>
   <li>JavaScript</li>
 </ul>
-
-<br>
 Back End:
 <ul>
   <li>Python</li>
