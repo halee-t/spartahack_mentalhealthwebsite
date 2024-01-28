@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>EverExisting</title>
+    <link rel="icon" href="../media/returning-visitor.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .custom-bg {
+        background-color: #fcd7d7;
+      }
+
+      #chat-container {
+        max-width: 600px;
+        margin: 50px auto;
+        border: 1px solid #fcd7d7;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      #chat-messages {
+        padding: 20px;
+        height: 300px;
+        overflow-y: auto;
+      }
+
+      #user-input {
+        padding: 10px;
+        border-top: 1px solid #fcd7d7;
+      }
+
+      body {
+        background-color: rgb(23,23,23);
+        color:#fcd7d7;
+      }
+
+      .custom-text-area {
+        background-color: rgb(45, 45, 45);
+        color:#fcd7d7;
+        border: rgb(23,23,23)
+      }
+
+      .custom-text-area:focus {
+        background-color: rgb(45, 45, 45);
+        color:#fcd7d7;
+        box-shadow: 0 0 0 0.25rem rgba(224, 162, 162, 0.428);
+        border-color: rgb(23,23,23);
+      }
+
+      .custom-btn {
+        background-color: #fcd7d7;
+      }
+      .custom-btn:hover {
+        background-color: #ffc3c3;
+        color:rgb(45, 45, 45)
+      }
+
+      #theVoid::placeholder {
+        color:#fcd7d7
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg custom-bg">
+      <div class="container-fluid">
+        <img
+          src="../media/returning-visitor.png"
+          alt="EverExisting"
+          width="auto"
+          height="30"
+          class="me-2"
+        />
+
+        <a class="navbar-brand" href="#">EverExisting</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="./checklist.html">Daily Checklist</a>
+            <a class="nav-link active" aria-current="page" href="./thevoid.html"
+              >The Void</a
+            >
+            <a class="nav-link" href="./trackers.html">Trackers</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+      <div class="text-center container-fluid custom-border" style="min-height: 60vh;" id="chat-container">
+            <label for="exampleTextBox" class="form-label"><h4 class="mt-3">Welcome to The Void!</h4> This is a safe space for you to let go of all those heavy, dredging thoughts in your brain. Write them down, click the button, and send them into the void forever!</label>
+             <textarea type="text" class="form-control my-4 custom-text-area" id="theVoid" style="height: 50vh" placeholder="Let it out love..."></textarea>
+             <button onclick="toTheVoid()" class="btn custom-btn mb-4">Next Stop: The Void -></button>
+             <audio id="voidSound">
+                <!-- <source src="../media/Scream-Short-B2-www.fesliyanstudios.com.mp3" type="audio/mp3"> -->
+                <source src="../media/Scream-Short-A1-www.fesliyanstudios.com.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+            </audio>
+      </div>
+    <script src="../script.js"></script>
+</html>
