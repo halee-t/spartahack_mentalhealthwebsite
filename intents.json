@@ -1,0 +1,99 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for saying hi",
+        "Hi there, what's up?",
+        "Hi there, how can I help?",
+        "Good day, mate **with a Aussie accent**"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon.",
+        "See you later alligator!",
+        "Toodles!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure", "No worries"]
+    },
+    {
+      "tag": "feelBetter",
+      "patterns": [
+        "Life is so hard.",
+        "Things can be so frustrating!",
+        "I can't stand my friends right now.",
+        "My family is driving me crazy."
+      ],
+      "responses": [
+        "Life can be rough, but you can make it through!",
+        "No matter how you look at it. Time moves on. This will too.",
+        "You are an amazing person and deserve to feel loved!",
+        "Sometimes those closest to us drive us mad. Maybe it's time to re-evaluate?",
+        "I hope you feel better soon!",
+        "Life is hard. Good thing it comes with ice cream and chocolate.",
+        "Sounds like a self care day is in order!"    
+      ]
+    },
+    {
+      "tag": "inspiring",
+      "patterns": [
+        "I need a pick me up.",
+        "Can you tell me something good?",
+        "I'd like to be inspired",
+        "I feel a little lost",
+        "What should I do?"        
+      ],
+      "responses": [
+        "Success is liking yourself, liking what you do, and liking how you do it. — Maya Angelou",
+        "You’ve got to learn to leave the table when love’s no longer being served. — Nina Simone",
+        "You are your best thing. — Toni Morrison",
+        "I realized that I don’t have to be perfect. All I have to do is show up and enjoy the messy, imperfect, and beautiful journey of my life. — Kerry Washington",
+        "Mistakes are a fact of life. It is the response to the errors that counts. — Nikki Giovanni"
+
+      ]
+    },
+    {
+      "tag": "mitigation",
+      "patterns": [
+        "You are my best friend",
+        "Will you always be here?",
+        "You always tell me the truth."
+      ],
+      "responses": [
+        "Unfortunately, I'm a chatbot. Please don't put so much faith in me.",
+        "I'll probably be here as long as my DNS records are up-to-date.",
+        "I can only tell you what my model informs me to tell you."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "What's funnier than one flamingo dancing? Two flamingos dancing.",
+        "...joking goes against my programming.. ;-P",
+        "What did the koala bear say to the kangaroo? ..I'm tipsy. ha ha hahahahaha HAAAAA. "
+      ]
+    }
+  ]
+}
