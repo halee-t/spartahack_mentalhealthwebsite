@@ -30,8 +30,13 @@
         border-color: #ffc3c3;
       }
 
+      .custom-border:focus {
+        border-color: #ffc3c3;
+        box-shadow: 0 0 5px #fcd7d7;
+      }
+
       .custom-container {
-        max-width: 600px;
+        max-width: 800px;
         margin: 50px auto;
         border: 2px solid #ffc3c3;
         background-color: white;
@@ -39,16 +44,15 @@
         overflow: hidden;
       }
 
-      .custom-checkbox input:checked + .custom-control-label::before {
-        background-color: #28a745; /* Change this to your desired color when checked */
-        border-color: #28a745; /* Change this to your desired color when checked */
-      }
-
-      .custom-checkbox
-        .custom-control-input:checked
-        ~ .custom-control-label::before {
-        background-color: #28a745; /* Change this to your desired color when checked */
-        border-color: #28a745; /* Change this to your desired color when checked */
+      .custom-alert {
+        background-color: #fcd7d7;
+        border-color: rgb(23, 23, 23, 23);
+        width: 20%;
+        height: auto;
+        position: absolute;
+        right: 0;
+        align-items: center;
+        margin-right: 2rem;
       }
     </style>
   </head>
@@ -63,7 +67,7 @@
           class="me-2"
         />
 
-        <a class="navbar-brand" href="#">EverExisting</a>
+        <a class="navbar-brand" href="../index.html">EverExisting</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -85,55 +89,80 @@
               >Daily Checklist</a
             >
             <a class="nav-link" href="./thevoid.html">The Void</a>
-            <a class="nav-link" href="./trackers.html">Trackers</a>
           </div>
         </div>
       </div>
     </nav>
 
     <div
-      class="container d-flex justify-content-center custom-container position-relative"
+      class="container d-flex justify-content-center custom-container"
       style="min-height: 50vh"
     >
       <div class="text-center">
-        <header class="d-flex justify-content-center m-3">
+        <header class="text-center m-3">
           <h2>Daily Checklist</h2>
+          <p>
+            Creating broken down TODO lists can be an excellent way to remain
+            organized and ease your overwhelmed mind. Spend a few minutes
+            thinking about what you want/need to do today and don't forget about
+            the little tasks! It's important to celebrate the small wins :) .
+          </p>
         </header>
-        <section
-          class=""
-          id="list"
-          style="width: 100%"
-          id="list"
-          style="width: 50%"
-        >
-          <div id="checklist" class="custom-checkbox">
-            <!-- Habit entries will be added here dynamically -->
-          </div>
-
-          <div
-            class="d-flex align-items-center position-absolute bottom-0 mb-5"
-            tyle="width: 100%"
-          >
-            <input
-              type="text"
-              id="checklistInput"
-              placeholder="Add a new mini goal"
-              class="me-2 custom-border"
-            />
-            <button
-              class="btn custom-bg custom-btn rounded-pill"
-              onclick="addCheckList()"
-            >
-              Add Goal
-            </button>
-          </div>
+        <div class="d-flex justify-content-center" tyle="width: 100%">
+          <input
+            type="text"
+            id="checklistInput"
+            placeholder="What do you want to do today?"
+            class="me-2 custom-border form-control"
+            style="width: 250px"
+          />
           <button
-            class="my-2 btn custom-bg custom-btn rounded-pill position-absolute bottom-0"
+            class="my-2 btn custom-bg custom-btn rounded-pill"
             onclick="clearList()"
           >
-            Clear
+            Clear List
           </button>
+        </div>
+        <section class="" id="list">
+          <div
+            id="checklist"
+            class="custom-checkbox overflow-y-auto overflow-x-hidden"
+          >
+            <!-- TODO List entries will go here -->
+          </div>
         </section>
+      </div>
+    </div>
+
+    <audio id="achievementSound">
+      <source src="../media/achive-sound-132273.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../media/trophy-star.png" alt="trophy" width="50px" />
+            <h5 class="modal-title ms-3" id="exampleModalLabel">You Did It!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            You have accomplished a task on your TODO list! You should be so
+            proud of yourself 😊 Keep going!!
+          </div>
+        </div>
       </div>
     </div>
 

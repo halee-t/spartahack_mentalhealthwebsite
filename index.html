@@ -46,6 +46,11 @@
       .custom-btn:hover {
         background-color: #ffc3c3;
       }
+
+      .custom-input:focus {
+        border-color: #fcd7d7; /* Change to your desired color */
+        box-shadow: 0 0 5px #fcd7d7;
+      }
     </style>
   </head>
   <body>
@@ -59,7 +64,7 @@
           class="me-2"
         />
 
-        <a class="navbar-brand" href="#">EverExisting</a>
+        <a class="navbar-brand" href="./index.html">EverExisting</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -78,7 +83,6 @@
             >
             <a class="nav-link" href="./html/checklist.html">Daily Checklist</a>
             <a class="nav-link" href="./html/thevoid.html">The Void</a>
-            <a class="nav-link" href="./html/trackers.html">Trackers</a>
           </div>
         </div>
       </div>
@@ -86,6 +90,12 @@
 
     <body>
       <div class="container" id="chat-container">
+        <header>
+          <h4 class="text-center">
+            Never fear! Your very own emotional support buddy is here!
+          </h4>
+          <hr />
+        </header>
         <div id="chat-messages" class="mb-3">
           <!-- Chat messages will be displayed here -->
           <div class="incoming-message">Hello! How can I help you today?</div>
@@ -97,15 +107,15 @@
 
         <div class="input-group align-items-center" id="user-input">
           <img
-            src="./media/wavingpic.jpg"
+            src="./media/panda-buddy.jpg"
             alt="Waving Character"
             width="auto"
-            height="40"
+            height="60"
             class="me-2 rounded-pill"
           />
           <input
             type="text"
-            class="form-control me-2"
+            class="form-control me-2 custom-input"
             placeholder="Type your message..."
           />
           <div class="input-group-append">

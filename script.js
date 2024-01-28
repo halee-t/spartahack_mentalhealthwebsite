@@ -7,7 +7,8 @@ function addCheckList() {
   if (checklistText !== "") {
     const checklistEntry = document.createElement("div");
     checklistEntry.className = "checklist-entry";
-    checklistEntry.innerHTML = `<input type="checkbox" id="${checklistText}"><label for="${checklistText}">${checklistText}</label>`;
+    const checkboxId = "checkbox_" + checklistText.replace(/\s/g, "_");
+    checklistEntry.innerHTML = `<input onchange="handleCheckboxChange('${checkboxId}')" type="checkbox" id="${checkboxId}"><label for="${checkboxId}">${checklistText}</label>`;
 
     checkList.appendChild(checklistEntry);
     checklistInput.value = "";
@@ -30,13 +31,36 @@ document
 function clearList() {
   var listToClear = document.getElementById("checklist");
   if (listToClear) {
-    listToClear.innerHTML = "";
+    listToClear.innerHTML = "Congratulations: A clear list is a clear mind :)";
   }
+}
+
+function handleCheckboxChange(checkboxId) {
+  // Get the current state of the checkbox
+  // const checkbox = document.getElementById(checkboxId);
+
+  // Check if the checkbox is now checked and was previously unchecked
+  // if (checkbox.checked && !checkbox.hasAttribute("data-checked")) {
+  // Show the modal when the checkbox is checked for the first time
+  achievementSounds();
+  $("#myModal").modal("show");
+  // }
+
+  // Store the current state of the checkbox
+  checkbox.setAttribute("data-checked", checkbox.checked);
+}
+
+function achievementSounds() {
+  var audio = document.getElementById("achievementSound");
+  audio.play();
 }
 
 function toTheVoid() {
   voidSounds();
-  setTimeout(toTheVoid, 2000);
+  setTimeout(changeText, 1500);
+}
+
+function changeText() {
   var textarea = document.getElementById("theVoid");
   if (textarea) {
     textarea.value = ":) Don't you feel so much better :)";
